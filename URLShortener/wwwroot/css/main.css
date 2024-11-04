@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-function-container{
+  background-color: rgb(135, 195, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2%;
+}
+
+.main-function-container h1{
+  font-weight: 600;
+  color: rgb(52, 52, 52);
+  margin-bottom: 2%;
+}
+
+.main-function-container div{
+  margin-top: 3%;
+  background-color: rgb(135, 185, 222);
+  box-shadow: 0 0 20px 10px rgb(87, 134, 168);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 1%;
+}
+
+.main-function-container div:hover{
+  background-color: rgb(116, 159, 195);
+}
+
+.main-function-container p{
+  font-weight: 500;
+  color: rgb(52, 52, 52);
+  text-align: center;
+  margin: 0;
+}
