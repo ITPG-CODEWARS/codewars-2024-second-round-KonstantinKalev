@@ -5,6 +5,7 @@ body{
 
 .main-function-container{
   background-color: rgb(135, 195, 255);
+  box-shadow: 0 0 20px 10px rgb(82, 114, 135);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +20,7 @@ body{
   margin-bottom: 2%;
 }
 
-.main-function-container div{
+.btn{
   margin-top: 3%;
   background-color: rgb(135, 185, 222);
   box-shadow: 0 0 20px 10px rgb(87, 134, 168);
@@ -31,13 +32,25 @@ body{
   padding: 1%;
 }
 
-.main-function-container div:hover{
+.btn:hover{
   background-color: rgb(116, 159, 195);
 }
 
-.main-function-container p{
+.btn p{
   font-weight: 500;
   color: rgb(52, 52, 52);
   text-align: center;
   margin: 0;
+}
+
+.length-selection{
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: default;
+  font-weight: 400;
+  color: rgb(52, 52, 52);
+  font-size: 1.2rem;
 }
