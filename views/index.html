@@ -13,11 +13,21 @@
     <div class="url-shortener-container">
         <h1 class="title">Съкръщаване на URL адрес</h1>
         <input type="text" id="originalURL" placeholder="Въведете URL адрес тук">
-        <div class="btn"><p class="btn-txt">Генериране</p></div>
+        <div class="choose-length">
+            <label><input type="radio" class="length" name="length" value="5" checked> 5 символа</label>
+            <label><input type="radio" class="length" name="length" value="6"> 6 символа</label>
+            <label><input type="radio" class="length" name="length" value="7"> 7 символа</label>
+            <label><input type="radio" class="length" name="length" value="8"> 8 символа</label>
+            <label><input type="radio" class="length" name="length" value="9"> 9 символа</label>
+            <label><input type="radio" class="length" name="length" value="10"> 10 символа</label>
+        </div>
+        <div class="btn" onclick="shortenURL()"><p class="btn-txt">Генериране</p></div>
     </div>
 
-    <div class="short-urls-container">
+    <div id="short-urls-container">
         <h1 class="short-urls-title">Съкратени URL адреси:</h1>
     </div>
+
+    <script src="../scripts/urlShortener.js"></script>
 </body>
 </html>
