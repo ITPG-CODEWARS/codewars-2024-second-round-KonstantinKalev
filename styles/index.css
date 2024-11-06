@@ -101,15 +101,14 @@ SHORT URLS CONTAINER
     width: 90%;
     margin: 1.3% auto;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
     border-radius: 30px;
     padding: 1.5%;
 }
 
-.shortUrlDiv p{
+.shortUrlDiv a{
     color: rgb(44, 44, 44);
     font-size: 1.2rem;
     font-weight: 450;
+    width: fit-content;
 }
