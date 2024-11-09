@@ -78,6 +78,10 @@ function displayShortUrl(shortUrl) {
         showStoredUrls();
     });
 
+    settingsBtn.addEventListener('click', function() {
+        window.location.href = `advancedView.html?shortUrl=${encodeURIComponent(shortUrl)}`;
+    });
+
     shortUrlDiv.appendChild(urlDisplay);
     shortUrlDiv.appendChild(btnsDiv);
     btnsDiv.appendChild(deleteBtn);
