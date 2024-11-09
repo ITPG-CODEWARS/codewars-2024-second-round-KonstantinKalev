@@ -101,7 +101,8 @@ SHORT URLS CONTAINER
     width: 90%;
     margin: 1.3% auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 30px;
     padding: 1.5%;
 }
@@ -111,4 +112,21 @@ SHORT URLS CONTAINER
     font-size: 1.2rem;
     font-weight: 450;
     width: fit-content;
+}
+
+.btnsDiv{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shortUrlDiv img{
+    width: 5%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.shortUrlDiv img:hover{
+    transform: scale(1.1);
 }
