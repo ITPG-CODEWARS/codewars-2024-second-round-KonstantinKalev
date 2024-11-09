@@ -125,6 +125,7 @@ SHORT URLS CONTAINER
     width: 5%;
     cursor: pointer;
     transition: 0.2s;
+    user-select: none;
 }
 
 .shortUrlDiv img:hover{
