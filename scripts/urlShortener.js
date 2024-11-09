@@ -70,6 +70,14 @@ function displayShortUrl(shortUrl) {
         urlDisplay.target = "_blank";
     }
 
+    deleteBtn.addEventListener('click', function() {
+        const updatedUrls = urls.filter(url => url.shortUrl !== shortUrl);
+        localStorage.setItem('urls', JSON.stringify(updatedUrls));
+
+        shortUrlDiv.remove();
+        showStoredUrls();
+    });
+
     shortUrlDiv.appendChild(urlDisplay);
     shortUrlDiv.appendChild(btnsDiv);
     btnsDiv.appendChild(deleteBtn);
@@ -85,6 +93,12 @@ function saveUrl(originalUrl, shortUrl) {
 
 function showStoredUrls() {
     const urls = JSON.parse(localStorage.getItem('urls')) || [];
+    shortUrlsContainer.innerHTML = '';
+
+    const title = document.createElement("h1");
+    title.className = "short-urls-title";
+    title.innerHTML = "Съкратени URL адреси:";
+    shortUrlsContainer.appendChild(title);
 
     urls.forEach(url => {
         displayShortUrl(url.shortUrl);
