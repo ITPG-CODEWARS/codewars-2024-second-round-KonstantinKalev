@@ -19,6 +19,10 @@ function shortenURL() {
         
         displayShortUrl(shortUrl);
         saveUrl(inputBox.value, shortUrl);
+
+        setTimeout(() => {
+            window.location.href = 'generating.html';
+        });
     }
     inputBox.value = "";
 }
