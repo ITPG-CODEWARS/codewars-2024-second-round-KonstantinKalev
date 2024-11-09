@@ -8,4 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let dots = ".".repeat(count);
         textElement.innerText = `${originalText}${dots}`;
     }, 500);
+
+    setTimeout(function() {
+        window.location.href = 'index.html';
+    }, 3000);
 });
