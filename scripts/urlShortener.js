@@ -49,6 +49,15 @@ function displayShortUrl(shortUrl) {
     let urlDisplay = document.createElement("a");
     urlDisplay.innerHTML = shortUrl;
 
+    let btnsDiv = document.createElement("div");
+    btnsDiv.className = "btnsDiv";
+
+    let deleteBtn = document.createElement("img");
+    deleteBtn.src = "../images/bin.png";
+
+    let settingsBtn = document.createElement("img");
+    settingsBtn.src = "../images/gear.png";
+
     const urls = JSON.parse(localStorage.getItem('urls')) || [];
     const originalUrl = urls.find(url => url.shortUrl === shortUrl)?.originalUrl;
 
@@ -58,6 +67,9 @@ function displayShortUrl(shortUrl) {
     }
 
     shortUrlDiv.appendChild(urlDisplay);
+    shortUrlDiv.appendChild(btnsDiv);
+    btnsDiv.appendChild(deleteBtn);
+    btnsDiv.appendChild(settingsBtn);
     shortUrlsContainer.appendChild(shortUrlDiv);
 }
 
