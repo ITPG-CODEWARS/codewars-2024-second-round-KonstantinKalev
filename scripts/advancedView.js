@@ -19,11 +19,11 @@ function loadUrls() {
         document.getElementById('short-url').innerText = urlData.shortUrl;
         generateQRCode(urlData.originalUrl);
 
-        if (urlData.clicks !== undefined) {
+        if (urlData.clicks !== null && urlData.clicks !== undefined) {
             document.getElementById('clickedTimesLeft').innerText = `${urlData.clicks} натискания`;
         } else {
-            document.getElementById('clickedTimesLeft').innerText = "няколко натискания";
-        }
+            document.getElementById('clickedTimesLeft').innerText = "николко натискания";
+        }        
 
     } else {
         alert("Съкратеният URL не е намерен.");
