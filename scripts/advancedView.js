@@ -17,9 +17,23 @@ function loadUrls() {
     if (urlData) {
         document.getElementById('original-url').innerText = urlData.originalUrl;
         document.getElementById('short-url').innerText = urlData.shortUrl;
+        generateQRCode(urlData.originalUrl);
     } else {
         alert("Съкратеният URL не е намерен.");
     }
+}
+
+function generateQRCode(url) {
+    const qrCodeContainer = document.getElementById('qrcode');
+    qrCodeContainer.innerHTML = "";
+    new QRCode(qrCodeContainer, {
+        text: url,
+        width: 250,
+        height: 250,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
 }
 
 window.onload = loadUrls;
