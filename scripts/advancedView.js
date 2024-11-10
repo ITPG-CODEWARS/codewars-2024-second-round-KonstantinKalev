@@ -59,13 +59,30 @@ function updateShortUrl(newShortUrl) {
     const urls = JSON.parse(localStorage.getItem('urls')) || [];
     const shortUrl = getQueryParams();
     const urlData = urls.find(url => url.shortUrl === shortUrl);
-
+    
     if (urlData) {
+        const newShortUrlPart = newShortUrl.trim();
+        const isDuplicate = urls.some(url => {
+            const existingShortUrlPart = url.shortUrl.split('/').pop();
+            return existingShortUrlPart === newShortUrlPart && url.shortUrl !== shortUrl;
+        });
+
+        if (isDuplicate) {
+            alert("Това съкращение е заето. Моля, изберете друго.");
+            return;
+        }
+        const currentShortUrlPart = shortUrl.split('/').pop();
+        if (currentShortUrlPart === newShortUrlPart) {
+            alert("Не можете да зададете същото съкращение.");
+            return;
+        }
         const domain = shortUrl.split('/')[0];
-        const updatedShortUrl = `${domain}/${newShortUrl}`;
+        const updatedShortUrl = `${domain}/${newShortUrlPart}`;
         urlData.shortUrl = updatedShortUrl;
         localStorage.setItem('urls', JSON.stringify(urls));
         window.location.href = 'changing.html';
+    } else {
+        alert("URL адресът не беше намерен.");
     }
 }
 
