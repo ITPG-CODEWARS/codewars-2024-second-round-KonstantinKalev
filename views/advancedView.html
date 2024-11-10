@@ -30,6 +30,17 @@
                 <input type="text" id="customURL" placeholder="Въведете персонализирано съкращение на URL адреса" autocomplete="off">
                 <div class="customBtn"><p class="customTxt">Генериране</p></div>
             </div>
+            <div class="auto-delete">
+                <h1>Автоматично изтриване след: </h1>
+                <div class="time">
+                    <input type="number" id="hours" placeholder="часове" min="0" max="23" step="1" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value > 23) this.value = 23;">
+                    <p>:</p>
+                    <input type="number" id="minutes" placeholder="минути" min="0" max="59" step="1" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value > 59) this.value = 59;">
+                    <p>:</p>
+                    <input type="number" id="seconds" placeholder="секунди" min="0" max="59" step="1" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value > 59) this.value = 59;">
+                </div>                           
+                <div class="autoDeleteBtn"><p class="autoDeleteTxt">Стартиране</p></div>
+            </div>
         </div>
     </div>
 
