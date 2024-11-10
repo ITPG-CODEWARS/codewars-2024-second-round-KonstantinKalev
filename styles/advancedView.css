@@ -7,7 +7,7 @@ body {
     background-color: rgb(156, 213, 250);
     box-shadow: 0 0 20px 10px rgb(134, 160, 178);
     width: 70%;
-    margin: 3% auto 0;
+    margin: 1% auto 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,4 +33,31 @@ span {
     display: inline-block;
     width: 90%;
     text-overflow: ellipsis;
+}
+
+/*******
+BACK BTN
+*******/
+.backBtn{
+    border: 5px solid rgb(126, 178, 212);
+    background-color: rgb(156, 213, 250);
+    border-radius: 100%;
+    overflow: hidden;
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 6%;
+    display: flex;
+    justify-content: center;
+}
+
+.backBtnImg{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.backBtnImg:hover{
+    transform: rotate(-180deg);
 }
