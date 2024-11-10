@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 15% auto 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.7rem;
+    background-color: rgb(156, 213, 250);
+    box-shadow: 0 0 20px 10px rgb(134, 160, 178);
+    color: rgb(44, 44, 44);
+    width: 70%;
+    padding: 3% 0;
+    border-radius: 30px;
+    user-select: none;
+    text-align: center;
+}
