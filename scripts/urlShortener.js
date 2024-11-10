@@ -63,11 +63,24 @@ function displayShortUrl(shortUrl) {
     settingsBtn.src = "../images/gear.png";
 
     const urls = JSON.parse(localStorage.getItem('urls')) || [];
-    const originalUrl = urls.find(url => url.shortUrl === shortUrl)?.originalUrl;
+    const urlData = urls.find(url => url.shortUrl === shortUrl);
 
-    if (originalUrl) {
-        urlDisplay.href = originalUrl;
+    if (urlData) {
+        urlDisplay.href = urlData.originalUrl;
         urlDisplay.target = "_blank";
+        urlDisplay.addEventListener('click', function(event) {
+            if (urlData.clicks > 0) {
+                urlData.clicks -= 1;
+                localStorage.setItem('urls', JSON.stringify(urls));
+                if (urlData.clicks === 0) {
+                    const updatedUrls = urls.filter(url => url.shortUrl !== shortUrl);
+                    localStorage.setItem('urls', JSON.stringify(updatedUrls));
+                    alert(`Линкът "${shortUrl}" ще бъде изтрит, тъй като броят на натисканията свърши.`);
+                    shortUrlDiv.remove();
+                    showStoredUrls();
+                }
+            }
+        });
     }
 
     deleteBtn.addEventListener('click', function() {
@@ -91,7 +104,7 @@ function displayShortUrl(shortUrl) {
 
 function saveUrl(originalUrl, shortUrl) {
     const urls = JSON.parse(localStorage.getItem('urls')) || [];
-    urls.push({ originalUrl, shortUrl });
+    urls.push({ originalUrl, shortUrl, clicks: null });
     localStorage.setItem('urls', JSON.stringify(urls));
 }
 
