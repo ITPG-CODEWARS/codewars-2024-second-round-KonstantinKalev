@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     let textElement = document.getElementById('text');
-    let originalText = "Персонализираното Ви<br>съкращение се прилага.";
+    let originalText = "Персонализираното Ви<br>съкръщение се прилага.";
     let count = 0;
 
     setInterval(function() {
