@@ -148,4 +148,22 @@ document.querySelector('.autoDeleteBtn').addEventListener('click', function() {
     }
 });
 
+document.querySelector('.resetBtn').addEventListener('click', function() {
+    const shortUrl = getQueryParams();
+    if (!shortUrl) {
+        alert("Няма съкратен URL адрес.");
+        return;
+    }
+
+    const urls = JSON.parse(localStorage.getItem('urls')) || [];
+    const urlData = urls.find(url => url.shortUrl === shortUrl);
+
+    if (urlData) {
+        urlData.clicks = null;
+        localStorage.setItem('urls', JSON.stringify(urls));
+        document.getElementById('clickedTimesLeft').innerText = "николко натискания";
+        document.getElementById('clicksInput').value = '';
+    }
+});
+
 window.onload = loadUrls;
