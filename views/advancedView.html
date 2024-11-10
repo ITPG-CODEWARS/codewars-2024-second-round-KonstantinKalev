@@ -33,7 +33,10 @@
             <div class="auto-delete">
                 <h1>Автоматично изтриване след:<br><span id="clickedTimesLeft">николко натискания</span></h1>
                 <input type="number" id="clicksInput" placeholder="Брой натискания" min="0" step="1" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value > 100) this.value = 100;">      
-                <div class="autoDeleteBtn"><p class="autoDeleteTxt">Потвърждаване</p></div>
+                <div class="btns">
+                    <div class="autoDeleteBtn"><p class="autoDeleteTxt">Потвърждаване</p></div>
+                    <div class="resetBtn"><p class="resetTxt">Нулиране</p></div>
+                </div>
             </div>
         </div>
     </div>
