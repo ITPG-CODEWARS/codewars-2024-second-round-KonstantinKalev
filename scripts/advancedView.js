@@ -18,6 +18,13 @@ function loadUrls() {
         document.getElementById('original-url').innerText = urlData.originalUrl;
         document.getElementById('short-url').innerText = urlData.shortUrl;
         generateQRCode(urlData.originalUrl);
+
+        if (urlData.clicks !== undefined) {
+            document.getElementById('clickedTimesLeft').innerText = `${urlData.clicks} натискания`;
+        } else {
+            document.getElementById('clickedTimesLeft').innerText = "няколко натискания";
+        }
+
     } else {
         alert("Съкратеният URL не е намерен.");
     }
@@ -95,6 +102,49 @@ document.querySelector('.customBtn').addEventListener('click', function() {
         updateShortUrl(customURLInput);
     } else {
         alert("Персонализираният URL адрес трябва да бъде от 5 до 10 символа и да съдържа само малки букви и цифри (a-z, 0-9).");
+    }
+});
+
+function validateClicksInput() {
+    const clicksInput = document.getElementById('clicksInput').value.trim();
+    if (!clicksInput) {
+        alert("Моля, въведете брой натискания.");
+        return false;
+    }
+
+    const clicks = parseInt(clicksInput, 10);
+    if (isNaN(clicks) || clicks < 0) {
+        alert("Моля, въведете валиден брой натискания.");
+        return false;
+    }
+
+    return clicks;
+}
+
+function updateClicksForUrl(clicks) {
+    const shortUrl = getQueryParams();
+    if (!shortUrl) {
+        alert("Няма съкратен URL адрес.");
+        return;
+    }
+
+    const urls = JSON.parse(localStorage.getItem('urls')) || [];
+    const urlData = urls.find(url => url.shortUrl === shortUrl);
+
+    if (urlData) {
+        urlData.clicks = clicks;
+        localStorage.setItem('urls', JSON.stringify(urls));
+        document.getElementById('clickedTimesLeft').innerText = `${clicks} натискания`;
+        document.getElementById('clicksInput').value = '';
+    } else {
+        alert("Съкратеният URL не беше намерен.");
+    }
+}
+
+document.querySelector('.autoDeleteBtn').addEventListener('click', function() {
+    const clicks = validateClicksInput();
+    if (clicks !== false) {
+        updateClicksForUrl(clicks);
     }
 });
 
