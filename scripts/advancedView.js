@@ -36,4 +36,21 @@ function generateQRCode(url) {
     });
 }
 
+function downloadQRCode() {
+    const canvas = document.querySelector('#qrcode canvas');
+    const shortUrl = getQueryParams();
+    
+    if (canvas && shortUrl) {
+        const imgData = canvas.toDataURL('image/png');
+        let sanitizedUrl = shortUrl.replace(/[^a-zA-Z0-9]/g, '-');
+        const a = document.createElement('a');
+        a.href = imgData;
+        a.download = `QRCode - ${sanitizedUrl}.png`;
+        a.click();
+    } else {
+        alert("QR кодът не е генериран.");
+    }
+}
+
+document.getElementById('downloadBtn').addEventListener('click', downloadQRCode);
 window.onload = loadUrls;
