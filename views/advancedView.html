@@ -19,9 +19,18 @@
         <h1>Съкратен URL: <span id="short-url"></span></h1>
     </div>
 
-    <div id="qrcode-container">
-        <div id="qrcode"></div>
-        <div id="downloadBtn"><p class="btnTxt">Изтегли</p></div>
+    <div class="more-container">
+        <div id="qrcode-container">
+            <div id="qrcode"></div>
+            <div id="downloadBtn"><p class="downloadTxt">Изтегли</p></div>
+        </div>
+
+        <div class="inner-container">
+            <div class="custom-url">
+                <input type="text" id="customURL" placeholder="Въведете персонализирано съкращение на URL адреса">
+                <div class="customBtn"><p class="customTxt">Генериране</p></div>
+            </div>
+        </div>
     </div>
 
     <script src="../scripts/advancedView.js"></script>
