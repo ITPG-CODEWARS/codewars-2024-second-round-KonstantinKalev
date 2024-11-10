@@ -45,12 +45,40 @@ function downloadQRCode() {
         let sanitizedUrl = shortUrl.replace(/[^a-zA-Z0-9]/g, '-');
         const a = document.createElement('a');
         a.href = imgData;
-        a.download = `QRCode - ${sanitizedUrl}.png`;
+        a.download = `QRCode-${sanitizedUrl}.png`;
         a.click();
-    } else {
-        alert("QR кодът не е генериран.");
+    }
+}
+
+function validateCustomURL(input) {
+    const regex = /^[a-z0-9]{5,10}$/;
+    return regex.test(input);
+}
+
+function updateShortUrl(newShortUrl) {
+    const urls = JSON.parse(localStorage.getItem('urls')) || [];
+    const shortUrl = getQueryParams();
+    const urlData = urls.find(url => url.shortUrl === shortUrl);
+
+    if (urlData) {
+        const domain = shortUrl.split('/')[0];
+        const updatedShortUrl = `${domain}/${newShortUrl}`;
+        urlData.shortUrl = updatedShortUrl;
+        localStorage.setItem('urls', JSON.stringify(urls));
+        window.location.href = 'changing.html';
     }
 }
 
 document.getElementById('downloadBtn').addEventListener('click', downloadQRCode);
+
+document.querySelector('.customBtn').addEventListener('click', function() {
+    const customURLInput = document.getElementById('customURL').value.trim();
+
+    if (validateCustomURL(customURLInput)) {
+        updateShortUrl(customURLInput);
+    } else {
+        alert("Персонализираният URL адрес трябва да бъде от 5 до 10 символа и да съдържа само малки букви и цифри (a-z, 0-9).");
+    }
+});
+
 window.onload = loadUrls;
