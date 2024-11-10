@@ -36,9 +36,8 @@ body {
 }
 
 .more-container{
-    background-color: black;
     width: 70%;
-    margin: 4% auto;
+    margin: 5% auto;
     display: flex;
     justify-content: space-between;
     padding: 1%;
@@ -48,8 +47,10 @@ body {
 INNER CONTAINER
 **************/
 .inner-container{
-    background-color: white;
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .custom-url{
     border-radius: 30px;
@@ -87,6 +88,65 @@ INNER CONTAINER
     background-color: rgb(193, 215, 230);
 }
 .customTxt{
+    color: rgb(44, 44, 44);
+    font-size: 1rem;
+    font-weight: 520;
+    user-select: none;
+}
+
+.auto-delete{
+    border-radius: 30px;
+    background-color: rgb(156, 213, 250);
+    box-shadow: 0 0 20px 10px rgb(134, 160, 178);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0 3%;
+}
+.auto-delete h1{
+    color: rgb(44, 44, 44);
+    font-size: 1.5rem;
+    font-weight: 520;
+    user-select: none;
+    margin-bottom: 0.5%;
+}
+.time{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.time p{
+    color: rgb(44, 44, 44);
+    font-size: 1.4rem;
+    padding: 0 1.5%;
+}
+.time input{
+    width: 100%;
+    color: rgb(44, 44, 44);
+    font-size: 1rem;
+    padding: 0.5%;
+    border: 2px solid rgb(88, 145, 183);
+    outline: none;
+    user-select: none;
+}
+.time input:focus{
+    border: 2px solid rgb(53, 104, 138);
+    outline: none;
+}
+.autoDeleteBtn{
+    background-color: rgb(200, 233, 255);
+    box-shadow: 0 0 20px 10px rgb(135, 178, 206);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0 3%;
+}
+.autoDeleteBtn:hover{
+    background-color: rgb(193, 215, 230);
+}
+.autoDeleteTxt{
     color: rgb(44, 44, 44);
     font-size: 1rem;
     font-weight: 520;
