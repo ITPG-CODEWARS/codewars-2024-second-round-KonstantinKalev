@@ -125,6 +125,12 @@ INNER CONTAINER
     border: 2px solid rgb(53, 104, 138);
     outline: none;
 }
+.btns{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .autoDeleteBtn{
     background-color: rgb(200, 233, 255);
     box-shadow: 0 0 20px 10px rgb(135, 178, 206);
@@ -137,6 +143,23 @@ INNER CONTAINER
     background-color: rgb(193, 215, 230);
 }
 .autoDeleteTxt{
+    color: rgb(44, 44, 44);
+    font-size: 1rem;
+    font-weight: 520;
+    user-select: none;
+}
+.resetBtn{
+    background-color: rgb(200, 233, 255);
+    box-shadow: 0 0 20px 10px rgb(135, 178, 206);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0 3%;
+    margin-top: 4%;
+}
+.resetBtn:hover{
+    background-color: rgb(193, 215, 230);
+}
+.resetTxt{
     color: rgb(44, 44, 44);
     font-size: 1rem;
     font-weight: 520;
