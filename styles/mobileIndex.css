@@ -1,0 +1,120 @@
+@media only screen and (max-width:720px){
+    /******************
+    PASTE URL CONTAINER
+    ******************/
+    .url-shortener-container{
+        width: 80%;
+        margin: 10% auto 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px;
+        padding: 1% 3% 6%;
+    }
+    
+    .title{
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+    .btn{
+        background-color: rgb(200, 233, 255);
+        padding: 0 4%;
+        margin-top: 8%;
+        user-select: none;
+    }
+    
+    .btn:hover{
+        background-color: rgb(200, 233, 255);
+    }
+    
+    .btn-txt{
+        font-size: 0.8rem;
+        font-weight: 520;
+    }
+    
+    #originalURL{
+        color: rgb(44, 44, 44);
+        width:  90%;
+        font-size: 1rem;
+        padding: 0.5%;
+        border: 2px solid rgb(88, 145, 183);
+    }
+    
+    .choose-length{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 7%;
+        font-size: 0.65rem;
+    }
+    
+    .length{
+        transform: scale(1);
+    }
+    
+    /*******************
+    SHORT URLS CONTAINER
+    *******************/
+    #short-urls-container{
+        background-color: rgb(156, 213, 250);
+        box-shadow: 0 0 20px 10px rgb(134, 160, 178);
+        width: 80%;
+        margin: 17% auto 4% auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px;
+        padding: 1% 3% 6%;
+        gap: 1rem;
+    }
+    
+    .short-urls-title{
+        width: 90%;
+        text-align: left;
+        color: rgb(44, 44, 44);
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 2%;
+    }
+    
+    .shortUrlDiv{
+        background-color: rgb(200, 233, 255);
+        box-shadow: 0 0 10px 6px rgb(134, 160, 178);
+        width: 90%;
+        margin: 1.3% auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        padding: 3% 1.5%;
+    }
+    
+    .shortUrlDiv a{
+        color: rgb(44, 44, 44);
+        font-size: 0.8rem;
+        font-weight: 450;
+        width: fit-content;
+    }
+    
+    .btnsDiv{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .shortUrlDiv img{
+        width: 15%;
+        cursor: pointer;
+        transition: 0.2s;
+        user-select: none;
+    }
+    
+    .shortUrlDiv img:hover{
+        transform: scale(1.1);
+    }
+}
