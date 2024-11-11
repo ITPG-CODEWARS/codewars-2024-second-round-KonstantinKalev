@@ -1,0 +1,192 @@
+@media only screen and (max-width:720px){
+    .info {
+        margin: 8% auto 0;
+        padding: 1% 5%;
+    }
+    
+    .info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .more-container{
+        width: 70%;
+        margin: 13% auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3.5rem;
+        align-items: center;
+        padding: 1% 5%;
+    }
+    
+    /**************
+    INNER CONTAINER
+    **************/
+    .inner-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3.5rem;
+    }
+    .custom-url{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 8% 5% 7%;
+    }
+    #customURL{
+        color: rgb(44, 44, 44);
+        width: 95%;
+        font-size: 1rem;
+        padding: 0.5%;
+        border: 2px solid rgb(88, 145, 183);
+        outline: none;
+        user-select: none;
+    }
+    #customURL:focus{
+        border: 2px solid rgb(53, 104, 138);
+        outline: none;
+    }
+    .customBtn{
+        background-color: rgb(200, 233, 255);
+        box-shadow: 0 0 20px 10px rgb(135, 178, 206);
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 0 3%;
+        margin-top: 5%;
+    }
+    .customBtn:hover{
+        background-color: rgb(200, 233, 255);
+    }
+    .customTxt{
+        color: rgb(44, 44, 44);
+        font-size: 1rem;
+        font-weight: 520;
+        user-select: none;
+    }
+    
+    .auto-delete{
+        border-radius: 30px;
+        background-color: rgb(156, 213, 250);
+        box-shadow: 0 0 20px 3px rgb(134, 160, 178);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1% 5% 8%;
+        width: 100%;
+    }
+    .auto-delete h1{
+        color: rgb(44, 44, 44);
+        font-size: 1.5rem;
+        font-weight: 520;
+        user-select: none;
+        margin-bottom: 6%;
+        text-align: center;
+    }
+    #clicksInput{
+        width: 90%;
+        color: rgb(44, 44, 44);
+        font-size: 1rem;
+        padding: 0.5%;
+        border: 2px solid rgb(88, 145, 183);
+        outline: none;
+        user-select: none;
+    }
+    #clicksInput:focus{
+        border: 2px solid rgb(53, 104, 138);
+        outline: none;
+    }
+    .btns{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+    }
+    .autoDeleteBtn{
+        background-color: rgb(200, 233, 255);
+        box-shadow: 0 0 20px 10px rgb(135, 178, 206);
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 0 3%;
+        margin-top: 4%;
+    }
+    .autoDeleteBtn:hover{
+        background-color: rgb(200, 233, 255);
+    }
+    .autoDeleteTxt{
+        color: rgb(44, 44, 44);
+        font-size: 1rem;
+        font-weight: 520;
+        user-select: none;
+    }
+    .resetBtn{
+        background-color: rgb(200, 233, 255);
+        box-shadow: 0 0 20px 10px rgb(135, 178, 206);
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 0 3%;
+        margin-top: 4%;
+    }
+    .resetBtn:hover{
+        background-color: rgb(200, 233, 255);
+    }
+    .resetTxt{
+        color: rgb(44, 44, 44);
+        font-size: 1rem;
+        font-weight: 520;
+        user-select: none;
+    }
+    
+    /******
+    QR CODE
+    ******/
+    #qrcode-container {
+        padding: 10% 5%;
+        width: 100%;
+        height: 100%;
+        gap: 1.5rem;
+    }
+    
+    #qrcode{
+        box-shadow: 0 0 20px 10px rgb(134, 160, 178);
+        user-select: none;
+    }
+    
+    #downloadBtn{
+        border-radius: 15px;
+        padding: 0 6%;
+        margin-top: 2.5%;
+    }
+    
+    #downloadBtn:hover{
+        background-color: rgb(200, 233, 255);
+    }
+    
+    /*******
+    BACK BTN
+    *******/
+    .backBtn{
+        margin-top: 2%;
+        margin-left: 2%;
+        width: 15%;
+    }
+    
+    .backBtnImg{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        user-select: none;
+        transform: rotate(180deg);
+    }
+    
+    .backBtnImg:hover{
+        transform: rotate(180deg);
+    }
+}
