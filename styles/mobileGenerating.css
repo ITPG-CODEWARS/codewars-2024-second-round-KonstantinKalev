@@ -1,0 +1,7 @@
+@media only screen and (max-width:720px){
+    h1{
+        margin: 65% auto 0;
+        width: 70%;
+        padding: 4% 10%;
+    }
+}
